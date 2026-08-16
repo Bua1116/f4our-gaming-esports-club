@@ -1,0 +1,57 @@
+/* Simple shared colours. Change these values to restyle the full website. */
+:root { --navy:#10243e; --blue:#1f4f7a; --light-blue:#dcecf8; --accent:#2d88c9; --white:#ffffff; --line:#c7d6e5; --text:#1d2b38; }
+* { box-sizing:border-box; }
+body { background:#f4f7fa; color:var(--text); font-family:Arial,Helvetica,sans-serif; }
+
+/* Readable text colours: dark text on white panels, light text only on blue areas. */
+main .text-light-emphasis,.card .text-light-emphasis,.panel .text-light-emphasis { color:#3d4d5c!important; }
+main .text-info,.card .text-info,.panel .text-info { color:#176b9f!important; }
+.hero .text-light-emphasis,.page-header .text-light-emphasis,.footer .text-light-emphasis { color:#f1f7fb!important; }
+.hero .text-info,.page-header .text-info { color:#d7f1ff!important; }
+
+/* Navigation bar shown on every page. */
+.navbar { background:var(--navy); border-bottom:3px solid var(--accent); }
+.navbar-brand { font-weight:700; letter-spacing:.03em; } .brand-mark { color:#8fd3ff; }
+.nav-link { color:#f2f8fc!important; font-weight:600; padding-left:.7rem!important; padding-right:.7rem!important; }
+.nav-link:hover,.nav-link.active { color:#8fd3ff!important; text-decoration:underline; }
+
+/* Home banner and page headers use solid colours only. */
+.hero { min-height:600px; display:grid; place-items:center; background:var(--blue); color:var(--white); }
+.hero .container { padding-top:80px; padding-bottom:80px; } .hero:after { display:none; }
+.eyebrow { color:#d6efff; letter-spacing:.1em; font-size:.78rem; font-weight:700; text-transform:uppercase; }
+.display-title { font-size:clamp(3rem,8vw,6rem); line-height:.95; font-weight:700; letter-spacing:-.04em; }
+.gradient-text { color:#d6efff; }
+.page-header { padding:135px 0 60px; background:var(--blue); color:var(--white); border-bottom:4px solid var(--accent); }
+.page-header h1 { font-size:clamp(2.7rem,6vw,4.5rem); font-weight:700; letter-spacing:-.04em; }
+
+/* Simple buttons, cards and sections. */
+.btn-neon { color:var(--white); background:var(--accent); border:1px solid var(--accent); border-radius:4px; font-weight:700; padding:.7rem 1.1rem; box-shadow:none; }
+.btn-neon:hover { color:var(--white); background:#236eaa; border-color:#236eaa; transform:none; }
+.btn-outline-light { border-radius:4px; font-weight:700; }
+.section { padding:70px 0; } .section-dark { background:#e8f0f6; } .section-title { font-weight:700; letter-spacing:-.02em; font-size:clamp(2rem,4vw,2.8rem); }
+.card,.panel { border:1px solid var(--line); background:var(--white); color:var(--text); border-radius:5px; box-shadow:none; }
+.card:hover { border-color:var(--accent); transform:none; transition:none; }
+.event-date { color:#175e91; font-size:.8rem; letter-spacing:.08em; font-weight:700; }
+.tag { display:inline-block; padding:.28rem .55rem; border:1px solid #9cb9cf; color:#315b7b; background:#eef6fb; font-size:.72rem; font-weight:700; border-radius:3px; }
+.stat { border-left:4px solid var(--accent); padding-left:1rem; } .stat strong { display:block; font-size:1.8rem; }
+
+/* Forms, tables and profiles. */
+.icon-box { width:52px;height:52px;display:grid;place-items:center;background:#e2f1fb;color:#246d9f;font-size:1.4rem;border-radius:4px; }
+.portrait { aspect-ratio:1/1; width:100%; object-fit:cover; filter:none; }
+.avatar { width:58px;height:58px;border-radius:50%;object-fit:cover;border:2px solid var(--accent); }
+.table { --bs-table-bg:transparent; --bs-table-color:var(--text); --bs-table-border-color:var(--line); } .table th { color:#245b85; text-transform:uppercase;font-size:.72rem;letter-spacing:.06em; }
+.form-control,.form-select { background:var(--white);color:var(--text);border-color:#9db6c9;border-radius:4px;padding:.7rem; }
+.form-control:focus,.form-select:focus { background:var(--white);color:var(--text);border-color:var(--accent);box-shadow:0 0 0 .15rem rgba(45,136,201,.18); }
+.form-control::placeholder { color:#5f7080; }
+.accordion { --bs-accordion-bg:#ffffff; --bs-accordion-color:var(--text); --bs-accordion-border-color:var(--line); --bs-accordion-btn-color:var(--text); --bs-accordion-btn-bg:#ffffff; --bs-accordion-active-bg:#e4f1fa; --bs-accordion-active-color:#1e5d8b; --bs-accordion-btn-focus-box-shadow:none; }
+.filter-btn.active { background:var(--accent); color:var(--white); } .player-card { overflow:hidden; } .player-role { color:#286896;font-weight:700; }
+
+/* Gallery, score feed, social posts and footer. */
+.gallery-item { position:relative; overflow:hidden; cursor:zoom-in; border:1px solid var(--line); border-radius:4px; } .gallery-item img { width:100%;height:260px;object-fit:cover;transition:none; } .gallery-item:hover img { transform:none; } .gallery-item:after { content:"View highlight"; position:absolute;inset:auto 0 0;padding:.75rem;background:rgba(16,36,62,.88);color:#fff;font-weight:700;opacity:0;transition:.2s; } .gallery-item:hover:after{opacity:1;}
+.lightbox { position:fixed;inset:0;z-index:2000;background:rgba(16,36,62,.9);display:none;place-items:center;padding:2rem;cursor:zoom-out; } .lightbox img { max-width:min(100%,1000px);max-height:85vh;box-shadow:none;border:4px solid #fff; }
+.score { font-size:1.4rem;font-weight:700; } .score-card { border-left:4px solid var(--accent); background:#f6fbff; }
+.social-post { border-left:4px solid var(--accent); background:#f6fbff; } .footer { background:var(--navy);border-top:3px solid var(--accent);color:#d9e9f5; }
+.toast { background:var(--white);color:var(--text);border:1px solid var(--accent); } .video-wrap iframe { width:100%;aspect-ratio:16/9;border:0; }
+
+/* Smaller spacing on phones and tablets. */
+@media (max-width:991px) { .navbar-collapse { padding:1rem 0; } .hero { min-height:530px; } .section { padding:55px 0; } }
