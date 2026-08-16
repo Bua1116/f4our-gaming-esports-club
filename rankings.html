@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      Rankings | Neon Nexus
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Shared navigation links. -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-mark">
+            //
+          </span>
+          NEON NEXUS
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span class="navbar-toggler-icon">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li>
+              <a class="nav-link" href="index.html">
+                Home
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="about.html">
+                About
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="tournaments.html">
+                Tournaments
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="rankings.html">
+                Rankings
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="players.html">
+                Players
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="gallery.html">
+                Gallery
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="community.html">
+                Community
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="contact.html">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="page-header">
+      <div class="container">
+        <p class="eyebrow">
+          Season 03 standings
+        </p>
+        <h1>
+          Climb the
+          <br>
+          <span class="gradient-text">
+            leaderboard.
+          </span>
+        </h1>
+      </div>
+    </header>
+    <main class="section">
+      <!-- Team standings and dynamic match-score area. -->
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="h3 fw-bold mb-0">
+                Valorant rankings
+              </h2>
+              <span class="tag">
+                POINTS SYSTEM
+              </span>
+            </div>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>
+                      #
+                    </th>
+                    <th>
+                      Team
+                    </th>
+                    <th>
+                      W-L
+                    </th>
+                    <th>
+                      Points
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      <strong>
+                        NEON RAVENS
+                      </strong>
+                    </td>
+                    <td>
+                      8-1
+                    </td>
+                    <td class="text-info fw-bold">
+                      2,480
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      <strong>
+                        BYTE RAIDERS
+                      </strong>
+                    </td>
+                    <td>
+                      7-2
+                    </td>
+                    <td>
+                      2,190
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      3
+                    </td>
+                    <td>
+                      <strong>
+                        UTAR NOVA
+                      </strong>
+                    </td>
+                    <td>
+                      6-3
+                    </td>
+                    <td>
+                      1,860
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      4
+                    </td>
+                    <td>
+                      <strong>
+                        GHOST PING
+                      </strong>
+                    </td>
+                    <td>
+                      5-4
+                    </td>
+                    <td>
+                      1,540
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small text-secondary">
+              Win = 250 pts • Loss = 50 pts • Tournament bonus = 300 pts
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="panel p-4">
+              <p class="eyebrow">
+                jQuery REST API demo
+              </p>
+              <h2 class="h3 fw-bold">
+                Live match wire
+              </h2>
+              <p class="text-light-emphasis small">
+                Scores are generated from a REST API response and rendered with jQuery.
+              </p>
+              <button id="refreshScores" class="btn btn-neon btn-sm mb-3">
+                <i class="bi bi-arrow-clockwise">
+                </i>
+                Refresh scores
+              </button>
+              <div id="liveScores">
+                <div class="spinner-border spinner-border-sm text-info">
+                </div>
+                Loading match feed…
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer py-4">
+      <div class="container">
+        ©
+        <span id="year">
+        </span>
+        Neon Nexus E-Sports Club
+      </div>
+    </footer>
+    <!-- jQuery REST API call converts mock JSON data into live-score cards. -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="assets/js/main.js"></script><script>function loadScores(){const teams=['Neon Ravens','Byte Raiders','UTAR Nova','Ghost Ping'];$('#liveScores').html('<div class="spinner-border spinner-border-sm text-info"></div> Updating…');$.getJSON('https://jsonplaceholder.typicode.com/posts?_limit=3').done(function(posts){let html='';posts.forEach((p,i)=>{html+=`<div class="score-card p-3 mb-2"><small class="text-secondary">MAP ${i+1} • LIVE</small><div class="d-flex justify-content-between align-items-center"><strong>${teams[i]}</strong><span class="score">${(p.id+7)%13} : ${(p.id+3)%13}</span><strong>${teams[i+1]}</strong></div></div>`;});$('#liveScores').hide().html(html).fadeIn(250);}).fail(()=>$('#liveScores').html('<p class="text-warning mb-0">Feed unavailable. Please check your internet connection.</p>'));}$(function(){loadScores();$('#refreshScores').click(loadScores);});</script>
+  </body>
+</html>
