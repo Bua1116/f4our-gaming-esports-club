@@ -154,7 +154,8 @@
           </div>
           <div class="row g-4">
             <div class="col-md-4">
-              <article class="card h-100 p-4">
+              <!-- event-card keeps every event detail and 5v5 label aligned. -->
+              <article class="card event-card h-100 p-4">
                 <span class="event-date">
                   28 AUG • Honor of Princes
                 </span>
@@ -170,7 +171,7 @@
               </article>
             </div>
             <div class="col-md-4">
-              <article class="card h-100 p-4">
+              <article class="card event-card h-100 p-4">
                 <span class="event-date">
                   12 SEP • Honor of Princes
                 </span>
@@ -186,7 +187,7 @@
               </article>
             </div>
             <div class="col-md-4">
-              <article class="card h-100 p-4">
+              <article class="card event-card h-100 p-4">
                 <span class="event-date">
                   26 SEP • Honor of Princes
                 </span>
@@ -264,7 +265,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="assets/js/main.js"></script><script>$(function(){const last=getCookie('neonNexusVisitor');const hour=new Date().getHours();const time=hour<12?'morning':hour<18?'afternoon':'evening';$('#visitorGreeting').text(last?`Welcome back, ${decodeURIComponent(last)}. Ready for another win?`:`Good ${time}, challenger. Your next squad is waiting.`);if(!last){setTimeout(()=>{const name=prompt('Welcome to F4our Gaming! What should we call you?');if(name&&name.trim()){setCookie('neonNexusVisitor',name.trim(),60);$('#visitorGreeting').text(`Welcome, ${name.trim()}. Ready to play?`);}},700);}});</script>
   </body>
 </html>
-
 
 
 

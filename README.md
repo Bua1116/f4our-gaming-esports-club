@@ -19,4 +19,3 @@ Open `index.html` in a browser, or serve this folder with a local web server. In
 
 Replace the sample club names, dates, people, photos, Discord URL, and event details with your group's final content before submitting.
 
-
