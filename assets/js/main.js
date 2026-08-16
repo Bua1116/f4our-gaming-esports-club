@@ -14,7 +14,7 @@ $(function(){
   sessionStorage.setItem('f4ourPages',visits); $('.session-count').text(visits);
   $('.nav-link').filter(function(){return $(this).attr('href')===page;}).addClass('active');
   $('#year').text(new Date().getFullYear());
-  $('.footer .container').append('<div class="footer-social mt-3"><strong>Follow us:</strong> <a target="_blank" href="https://www.instagram.com/f4our_gaming?igsh=MWFxbXk0NTN3dDUxaA%3D%3D&igsi=MWFxbXk0NTN3dDUxaA%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i> @f4our_gaming</a></div>');
+  $('.footer .container').append('<div class="footer-social"><strong>Follow us:</strong> <a target="_blank" href="https://www.instagram.com/f4our_gaming?igsh=MWFxbXk0NTN3dDUxaA%3D%3D&igsi=MWFxbXk0NTN3dDUxaA%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i> @f4our_gaming</a></div>');
 
   // Display the cookie explanation once per visitor, then remember their choice with a cookie.
   if(!getCookie('f4ourCookieConsent')){
@@ -23,5 +23,4 @@ $(function(){
     $('#acceptCookies').on('click',function(){setCookie('f4ourCookieConsent','accepted',60);modal.hide();});
   }
 });
-
 
