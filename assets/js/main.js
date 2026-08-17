@@ -9,7 +9,7 @@ $(function(){
   $('.navbar-nav > li > a[href="tournaments.html"]').each(function(){
     $(this).parent().replaceWith('<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tournaments</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="tournaments.html">Schedule</a></li><li><a class="dropdown-item" href="rankings.html">Rankings</a></li><li><a class="dropdown-item" href="players.html">Players</a></li></ul></li>');
   });
-  const page=(location.pathname.split('/').pop()||'index.html');
+  const page=(location.pathname.split('/').pop()||'main.html');
   let visits=parseInt(sessionStorage.getItem('f4ourPages')||'0',10)+1;
   sessionStorage.setItem('f4ourPages',visits); $('.session-count').text(visits);
   $('.nav-link').filter(function(){return $(this).attr('href')===page;}).addClass('active');
