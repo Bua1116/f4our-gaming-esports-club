@@ -10,7 +10,7 @@
   </head>
   <body>
     <!-- Shared navigation. The JavaScript turns Tournaments into the Schedule/Rankings/Players dropdown. -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"><div class="container"><a class="navbar-brand" href="index.html">F4OUR GAMING</a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto"><li><a class="nav-link" href="index.html">Home</a></li><li><a class="nav-link" href="about.html">About</a></li><li><a class="nav-link" href="tournaments.html">Tournaments</a></li><li><a class="nav-link" href="gallery.html">Gallery</a></li><li><a class="nav-link" href="community.html">Community</a></li><li><a class="nav-link" href="contact.html">Contact</a></li></ul></div></div></nav>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"><div class="container"><a class="navbar-brand" href="main.html">F4OUR GAMING</a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto"><li><a class="nav-link" href="main.html">Home</a></li><li><a class="nav-link" href="aboutus.html">About</a></li><li><a class="nav-link" href="tournaments.html">Tournaments</a></li><li><a class="nav-link" href="gallery.html">Gallery</a></li><li><a class="nav-link" href="community.html">Community</a></li><li><a class="nav-link" href="contact.html">Contact</a></li></ul></div></div></nav>
     <header class="page-header"><div class="container"><p class="eyebrow">KPL player roster</p><h1>HONOR OF<br><span class="gradient-text">PRINCES PLAYERS.</span></h1><p class="lead text-light-emphasis">Players are grouped by the five Honor of Princes map lanes.</p></div></header>
     <main class="section"><div class="container">
       <!-- Filter by the five game lanes. -->
@@ -37,7 +37,12 @@
         <div class="col-sm-6 col-lg-3 player" data-game="roamer"><div class="card player-card h-100"><img class="portrait" src="assets/images/YiSheng.jpg" alt="YiSheng"><div class="card-body"><h2 class="h5">YiSheng</h2><p class="player-role">Roamer · Chongqing Wolves</p><p class="small text-light-emphasis">Win Rate 64% · KDA 4.4 · MVP 9</p></div></div></div>
       </div>
     </div></main>
-    <footer class="footer py-4"><div class="container">© <span id="year"></span> F4our Gaming</div></footer>
+    <footer class="footer py-4">
+      <div class="container d-flex flex-wrap justify-content-between gap-2">
+        <span>© <span id="year"></span> F4our Gaming</span>
+        <span>Built for the next game.</span>
+      </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="assets/js/main.js"></script>
     <script>$('.filter-btn').click(function(){$('.filter-btn').removeClass('active');$(this).addClass('active');const lane=$(this).data('game');$('.player').stop(true,true).fadeOut(120);setTimeout(()=>{$('.player').filter(function(){return lane==='all'||$(this).data('game')===lane;}).fadeIn(220);},130);});</script>
   </body>
