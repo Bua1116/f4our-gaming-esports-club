@@ -1,54 +1,570 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap');
 
 /* F4our Gaming uses only solid blue, purple and black colours. */
-:root { --black:#07080d; --navy:#10152b; --blue:#1479d1; --purple:#6046b8; --panel:#171b30; --line:#353b63; --white:#f8fbff; --muted:#c0c8dc; }
-* { box-sizing:border-box; }
-body { background:var(--black); color:var(--white); font-family:'Rajdhani',Arial,sans-serif; font-size:1.08rem; }
-h1,h2,h3,h4,h5,.navbar-brand,.btn,.eyebrow,.tag { font-family:'Orbitron',Arial,sans-serif; }
+:root {
+    --black: #07080d;
+    --navy: #10152b;
+    --blue: #1479d1;
+    --purple: #6046b8;
+    --panel: #171b30;
+    --line: #353b63;
+    --white: #f8fbff;
+    --muted: #c0c8dc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: 1.08rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand,
+.btn,
+.eyebrow,
+.tag {
+    font-family: 'Orbitron', Arial, sans-serif;
+}
 
 /* Fixed navigation with the supplied F4our Gaming logo. */
-.navbar { background:#090b15; border-bottom:2px solid var(--purple); }
-.navbar-brand { display:flex;align-items:center;gap:.55rem;font-size:1rem;letter-spacing:.03em; }
-.brand-logo { width:37px;height:37px;object-fit:cover;border-radius:50%;border:1px solid var(--blue); }
-.brand-mark { color:#8f80ff; }
-.nav-link { color:var(--white)!important; font-weight:600; }
-.nav-link:hover,.nav-link.active,.dropdown-item:hover { color:#a897ff!important; }
-.dropdown-menu { background:#171b30;border:1px solid var(--purple);border-radius:3px; }
-.dropdown-item { color:var(--white);font-family:'Rajdhani',Arial,sans-serif;font-weight:600; }
-.dropdown-item:hover { background:#252a49; }
+.navbar {
+    background: #090b15;
+    border-bottom: 2px solid var(--purple);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    font-size: 1rem;
+    letter-spacing: .03em;
+}
+
+.brand-logo {
+    width: 37px;
+    height: 37px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+}
+
+.brand-mark {
+    color: #8f80ff;
+}
+
+.nav-link {
+    color: var(--white) !important;
+    font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link.active,
+.dropdown-item:hover {
+    color: #a897ff !important;
+}
+
+.dropdown-menu {
+    background: #171b30;
+    border: 1px solid var(--purple);
+    border-radius: 3px;
+}
+
+.dropdown-item {
+    color: var(--white);
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-weight: 600;
+}
+
+.dropdown-item:hover {
+    background: #252a49;
+}
 
 /* Plain dark esports headers: image plus solid black overlay, no gradients. */
-.hero,.page-header { position:relative;isolation:isolate;background:#10152b;color:var(--white); }
-.hero { min-height:650px; display:grid;place-items:center;background-image:url('../images/hero-gaming.png');background-size:cover;background-position:center; }
-.hero::before { content:'';position:absolute;inset:0;background:rgba(7,8,13,.72);z-index:-1; }
-.hero .container { padding-top:100px;padding-bottom:80px; }
-.page-header { padding:140px 0 65px;background-image:url('../images/hero-gaming.png');background-size:cover;background-position:center; }
-.page-header::before { content:'';position:absolute;inset:0;background:rgba(7,8,13,.78);z-index:-1; }
-.page-header .container { position:relative; }
-.eyebrow { color:#b5a8ff;letter-spacing:.12em;font-size:.72rem;font-weight:700;text-transform:uppercase; }
-.display-title { font-size:clamp(3rem,8vw,6.5rem);line-height:.95;font-weight:800;letter-spacing:-.04em; }
-.gradient-text { color:#9f8cff; }
-.page-header h1 { font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800; }
-.text-light-emphasis { color:#e3e8f5!important; }.text-info { color:#b5a8ff!important; }.text-secondary { color:#c0c8dc!important; }
+.hero,
+.page-header {
+    position: relative;
+    isolation: isolate;
+    background: #10152b;
+    color: var(--white);
+}
+
+.hero {
+    min-height: 650px;
+    display: grid;
+    place-items: center;
+    background-image: url('../images/hero-gaming.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 8, 13, .72);
+    z-index: -1;
+}
+
+.hero .container {
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.page-header {
+    padding: 140px 0 65px;
+    background-image: url('../images/hero-gaming.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 8, 13, .78);
+    z-index: -1;
+}
+
+.page-header .container {
+    position: relative;
+}
+
+.eyebrow {
+    color: #b5a8ff;
+    letter-spacing: .12em;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.display-title {
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    line-height: .95;
+    font-weight: 800;
+    letter-spacing: -.04em;
+}
+
+.gradient-text {
+    color: #9f8cff;
+}
+
+.page-header h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+}
+
+.text-light-emphasis {
+    color: #e3e8f5 !important;
+}
+
+.text-info {
+    color: #b5a8ff !important;
+}
+
+.text-secondary {
+    color: #c0c8dc !important;
+}
 
 /* Buttons, information panels and statistics. */
-.btn-neon { color:#fff;background:var(--blue);border:1px solid var(--blue);border-radius:3px;font-weight:700;padding:.75rem 1.15rem; }
-.btn-neon:hover { color:#fff;background:#0c5fa9;border-color:#0c5fa9; }
-.btn-outline-light { border-radius:3px;font-weight:700; }.btn-outline-light:hover { background:#fff;color:#10152b; }
-.section { padding:75px 0; }.section-dark { background:#0e1120; }.section-title { font-weight:800;font-size:clamp(2rem,4vw,3rem); }
-.card,.panel { background:var(--panel);border:1px solid var(--line);color:var(--white);border-radius:4px;box-shadow:none; }
-.card:hover { border-color:var(--purple);transform:none; }.event-date,.player-role { color:#a897ff;font-weight:700; }.tag { color:#fff;border:1px solid var(--purple);background:#282153;font-size:.68rem;border-radius:2px; }
-.event-card { display:flex;flex-direction:column;min-height:290px; }.event-card .tag { display:block;margin-top:auto;padding:.35rem .5rem; }
-.stat { border-left:4px solid var(--blue);padding-left:1rem; }.stat strong { display:block;font-size:1.9rem;font-family:'Orbitron',Arial,sans-serif; }
-.hero-stat { background:#151a31;border:1px solid var(--purple);padding:1rem;min-width:135px;border-radius:3px; }.hero-stat strong { color:#b5a8ff;font-family:'Orbitron',Arial,sans-serif;font-size:1.25rem;display:block; }
+.btn-neon {
+    color: #fff;
+    background: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 3px;
+    font-weight: 700;
+    padding: .75rem 1.15rem;
+}
+
+.btn-outline-light {
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+.section {
+    padding: 75px 0;
+}
+
+.section-dark {
+    background: #0e1120;
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.card,
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--white);
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.event-date,
+.player-role {
+    color: #a897ff;
+    font-weight: 700;
+}
+
+.tag {
+    color: #fff;
+    border: 1px solid var(--purple);
+    background: #282153;
+    font-size: .68rem;
+    border-radius: 2px;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 290px;
+}
+
+.event-card .tag {
+    display: block;
+    margin-top: auto;
+    padding: .35rem .5rem;
+}
+
+.stat {
+    border-left: 4px solid var(--blue);
+    padding-left: 1rem;
+}
+
+.stat strong {
+    display: block;
+    font-size: 1.9rem;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+.hero-stat {
+    background: #151a31;
+    border: 1px solid var(--purple);
+    padding: 1rem;
+    min-width: 135px;
+    border-radius: 3px;
+}
+
+.hero-stat strong {
+    color: #b5a8ff;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 1.25rem;
+    display: block;
+}
 
 /* Data, forms and other interactive components. */
-.table { --bs-table-bg:transparent;--bs-table-color:var(--white);--bs-table-border-color:var(--line); }.table th { color:#a897ff;text-transform:uppercase;font-size:.72rem;letter-spacing:.08em; }
-.form-control,.form-select { background:#0d1020;color:var(--white);border-color:#4b4d7c;border-radius:3px;padding:.75rem; }.form-control:focus,.form-select:focus { background:#0d1020;color:#fff;border-color:#a897ff;box-shadow:0 0 0 .15rem rgba(168,151,255,.3); }.form-control::placeholder { color:#bac2d4; }
-.input-valid { border-color:#58d68d!important; }.input-icon { position:relative; }.input-icon .valid-tick { position:absolute;right:12px;top:40px;color:#58d68d;display:none;font-size:1.3rem; }.input-icon.valid .valid-tick { display:block; }
-.accordion { --bs-accordion-bg:#171b30;--bs-accordion-color:#fff;--bs-accordion-border-color:var(--line);--bs-accordion-btn-color:#fff;--bs-accordion-btn-bg:#171b30;--bs-accordion-active-bg:#282153;--bs-accordion-active-color:#fff;--bs-accordion-btn-focus-box-shadow:none; }
-.filter-btn.active { background:var(--purple);border-color:var(--purple);color:#fff; }.filter-btn { border-color:#5d638d;color:#fff; }.filter-btn:hover { background:#282153;color:#fff; }
-.portrait { aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top; }.committee-portrait { object-position:center 35%; }.player-card .portrait { object-position:center top; }.gallery-item { position:relative;overflow:hidden;cursor:zoom-in;border:1px solid var(--line); }.gallery-item img { width:100%;height:260px;object-fit:cover; }.gallery-item:after { content:'View highlight';position:absolute;inset:auto 0 0;padding:.75rem;background:#090b15;color:#fff;font-weight:700;opacity:0;transition:.2s; }.gallery-item:hover:after { opacity:1; }.lightbox { position:fixed;inset:0;z-index:2000;background:rgba(7,8,13,.95);display:none;place-items:center;padding:2rem;cursor:zoom-out; }.lightbox img { max-width:min(100%,1000px);max-height:85vh;border:3px solid var(--purple); }
-.video-card { background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1rem;height:100%; }.video-card iframe { width:100%;aspect-ratio:16/9;border:0;display:block; }.score { font-size:1.4rem;font-family:'Orbitron',Arial,sans-serif;font-weight:700; }.score-card,.social-post { border-left:4px solid var(--purple);background:#12162a; }.score-card { min-height:150px;display:flex;flex-direction:column;justify-content:center; }.map-label { display:block;margin-bottom:.9rem; }.score-row { display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;column-gap:1rem; }.score-team:first-child { text-align:left; }.score-team:last-child { text-align:right; }.footer { background:#090b15;border-top:2px solid var(--purple);color:#d9e0ef; }.footer .container { display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem; }.footer-social { margin:0;white-space:nowrap; }.footer-social a { color:#c6baff;text-decoration:none;font-weight:700;margin-right:1rem; }.footer-social a:hover { color:#fff;text-decoration:underline; }
-.cookie-banner .modal-content { background:#171b30;color:#fff;border:1px solid var(--purple); }.cookie-banner .modal-header { border-color:var(--line); }.toast { background:#171b30;color:#fff;border:1px solid var(--purple); }
-@media (max-width:991px) { .navbar-collapse { padding:1rem 0; }.hero { min-height:560px; }.section { padding:55px 0; }.hero-stat { min-width:110px; } }
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--white);
+    --bs-table-border-color: var(--line);
+}
+
+.table th {
+    color: #a897ff;
+    text-transform: uppercase;
+    font-size: .72rem;
+    letter-spacing: .08em;
+}
+
+.form-control,
+.form-select {
+    background: #0d1020;
+    color: var(--white);
+    border-color: #4b4d7c;
+    border-radius: 3px;
+    padding: .75rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: #0d1020;
+    color: #fff;
+    border-color: #a897ff;
+    box-shadow: 0 0 0 .15rem rgba(168, 151, 255, .3);
+}
+
+.form-control::placeholder {
+    color: #bac2d4;
+}
+
+.input-valid {
+    border-color: #58d68d !important;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon .valid-tick {
+    position: absolute;
+    right: 12px;
+    top: 40px;
+    color: #58d68d;
+    display: none;
+    font-size: 1.3rem;
+}
+
+.input-icon.valid .valid-tick {
+    display: block;
+}
+
+.accordion {
+    --bs-accordion-bg: #171b30;
+    --bs-accordion-color: #fff;
+    --bs-accordion-border-color: var(--line);
+    --bs-accordion-btn-color: #fff;
+    --bs-accordion-btn-bg: #171b30;
+    --bs-accordion-active-bg: #282153;
+    --bs-accordion-active-color: #fff;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.filter-btn.active {
+    background: var(--purple);
+    border-color: var(--purple);
+    color: #fff;
+}
+
+.filter-btn {
+    border-color: #5d638d;
+    color: #fff;
+}
+
+/* Keep borders the same when the mouse moves over buttons or cards. */
+.card:hover {
+    border-color: var(--line);
+}
+
+.tournament-card {
+    cursor: pointer;
+}
+
+.btn-neon:hover,
+.btn-neon:focus {
+    color: #fff;
+    background: var(--blue);
+    border-color: var(--blue);
+    box-shadow: none;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+    color: #fff;
+    background: transparent;
+    border-color: #5d638d;
+    box-shadow: none;
+}
+
+.filter-btn.active:hover,
+.filter-btn.active:focus {
+    color: #fff;
+    background: var(--purple);
+    border-color: var(--purple);
+}
+
+.portrait {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.committee-portrait {
+    object-position: center 35%;
+}
+
+.player-card .portrait {
+    object-position: center top;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+    border: 1px solid var(--line);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.gallery-item:after {
+    content: 'View highlight';
+    position: absolute;
+    inset: auto 0 0;
+    padding: .75rem;
+    background: #090b15;
+    color: #fff;
+    font-weight: 700;
+    opacity: 0;
+    transition: .2s;
+}
+
+.gallery-item:hover:after {
+    opacity: 1;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(7, 8, 13, .95);
+    display: none;
+    place-items: center;
+    padding: 2rem;
+    cursor: zoom-out;
+}
+
+.lightbox img {
+    max-width: min(100%, 1000px);
+    max-height: 85vh;
+    border: 3px solid var(--purple);
+}
+
+.video-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1rem;
+    height: 100%;
+}
+
+.video-card iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: 0;
+    display: block;
+}
+
+.score {
+    font-size: 1.4rem;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-weight: 700;
+}
+
+.score-card,
+.social-post {
+    border-left: 4px solid var(--purple);
+    background: #12162a;
+}
+
+.score-card {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.map-label {
+    display: block;
+    margin-bottom: .9rem;
+}
+
+.score-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.score-team:first-child {
+    text-align: left;
+}
+
+.score-team:last-child {
+    text-align: right;
+}
+
+.footer {
+    background: #090b15;
+    border-top: 2px solid var(--purple);
+    color: #d9e0ef;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-social {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.footer-social a {
+    color: #c6baff;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.footer-social a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.cookie-banner .modal-content {
+    background: #171b30;
+    color: #fff;
+    border: 1px solid var(--purple);
+}
+
+.cookie-banner .modal-header {
+    border-color: var(--line);
+}
+
+.toast {
+    background: #171b30;
+    color: #fff;
+    border: 1px solid var(--purple);
+}
+
+/* Keep the Vision and Mission section clear and neatly aligned. */
+.vision-mission-item {
+    padding: 0.5rem 0;
+}
+
+.vision-mission-text {
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.vision-mission-line {
+    border-color: var(--line);
+    margin: 1.5rem 0;
+    opacity: 1;
+}
+
+@media (max-width:991px) {
+    .navbar-collapse {
+        padding: 1rem 0;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .hero-stat {
+        min-width: 110px;
+    }
+}
