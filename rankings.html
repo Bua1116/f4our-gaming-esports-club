@@ -82,7 +82,7 @@
           <div class="col-lg-7">
             <div class="d-flex justify-content-between align-items-center mb-3">
               <h2 class="h3 fw-bold mb-0">
-                Honor of Princes rankings
+                Honor of Kings rankings
               </h2>
               <span class="tag">
                 POINTS SYSTEM
@@ -145,7 +145,7 @@
                     </td>
                     <td>
                       <strong>
-                        DRG
+                        GUANGZHOU TTG
                       </strong>
                     </td>
                     <td>
@@ -161,7 +161,7 @@
                     </td>
                     <td>
                       <strong>
-                        JD GAMING
+                        SHENZHEN DYG
                       </strong>
                     </td>
                     <td>
@@ -169,6 +169,22 @@
                     </td>
                     <td>
                       1,540
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      5
+                    </td>
+                    <td>
+                      <strong>
+                        WUHAN ESTARPRO
+                      </strong>
+                    </td>
+                    <td>
+                      4-5
+                    </td>
+                    <td>
+                      1,270
                     </td>
                   </tr>
                 </tbody>
@@ -211,7 +227,7 @@
       </div>
     </footer>
     <!-- jQuery REST API call converts mock JSON data into live-score cards. -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="assets/js/main.js"></script><script>function loadScores(){const teams=['AG Super Play','Chongqing Wolves','DRG','JD Gaming'];$('#liveScores').html('<div class="spinner-border spinner-border-sm text-info"></div> Updating…');$.getJSON('https://jsonplaceholder.typicode.com/posts?_limit=3').done(function(posts){let html='';posts.forEach((p,i)=>{html+=`<div class="score-card p-3 mb-2"><small class="map-label text-secondary">MAP ${i+1} • LIVE</small><div class="score-row"><strong class="score-team">${teams[i]}</strong><span class="score">${(p.id+7)%13} : ${(p.id+3)%13}</span><strong class="score-team">${teams[i+1]}</strong></div></div>`;});$('#liveScores').hide().html(html).fadeIn(250);}).fail(()=>$('#liveScores').html('<p class="text-warning mb-0">Feed unavailable. Please check your internet connection.</p>'));}$(function(){loadScores();$('#refreshScores').click(loadScores);});</script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="assets/js/main.js"></script><script>function loadScores(){const teams=['AG Super Play','Chongqing Wolves','Guangzhou TTG','Shenzhen DYG','Wuhan eStarPro'];$('#liveScores').html('<div class="spinner-border spinner-border-sm text-info"></div> Updating…');$.getJSON('https://jsonplaceholder.typicode.com/posts?_limit=4').done(function(posts){let html='';posts.forEach((p,i)=>{html+=`<div class="score-card p-3 mb-2"><small class="map-label text-secondary">MAP ${i+1} • LIVE</small><div class="score-row"><strong class="score-team">${teams[i]}</strong><span class="score">${(p.id+7)%13} : ${(p.id+3)%13}</span><strong class="score-team">${teams[i+1]}</strong></div></div>`;});$('#liveScores').hide().html(html).fadeIn(250);}).fail(()=>$('#liveScores').html('<p class="text-warning mb-0">Feed unavailable. Please check your internet connection.</p>'));}$(function(){loadScores();$('#refreshScores').click(loadScores);});</script>
   </body>
 </html>
 
