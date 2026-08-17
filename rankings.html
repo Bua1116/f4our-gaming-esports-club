@@ -84,9 +84,6 @@
               <h2 class="h3 fw-bold mb-0">
                 Honor of Kings rankings
               </h2>
-              <span class="tag">
-                POINTS SYSTEM
-              </span>
             </div>
             <div class="table-responsive">
               <table class="table">
@@ -197,13 +194,13 @@
           <div class="col-lg-5">
             <div class="panel p-4">
               <p class="eyebrow">
-                jQuery REST API demo
+                Latest scores
               </p>
               <h2 class="h3 fw-bold">
-                Live match wire
+                Live match scores
               </h2>
               <p class="text-light-emphasis small">
-                Scores are generated from a REST API response and rendered with jQuery.
+                Check the latest match scores below.
               </p>
               <button id="refreshScores" class="btn btn-neon btn-sm mb-3">
                 <i class="bi bi-arrow-clockwise">
@@ -222,16 +219,45 @@
     </main>
     <footer class="footer py-4">
       <div class="container d-flex flex-wrap justify-content-between gap-2">
-        <span>© <span id="year"></span> F4our Gaming</span>
-        <span>Built for the next game.</span>
+        <span>
+          ©
+          <span id="year">
+          </span>
+          F4our Gaming
+        </span>
+        <span>
+          Built for the next game.
+        </span>
       </div>
     </footer>
-    <!-- jQuery REST API call converts mock JSON data into live-score cards. -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="assets/js/main.js"></script><script>function loadScores(){const teams=['AG Super Play','Chongqing Wolves','Guangzhou TTG','Shenzhen DYG','Wuhan eStarPro'];$('#liveScores').html('<div class="spinner-border spinner-border-sm text-info"></div> Updating…');$.getJSON('https://jsonplaceholder.typicode.com/posts?_limit=4').done(function(posts){let html='';posts.forEach((p,i)=>{html+=`<div class="score-card p-3 mb-2"><small class="map-label text-secondary">MAP ${i+1} • LIVE</small><div class="score-row"><strong class="score-team">${teams[i]}</strong><span class="score">${(p.id+7)%13} : ${(p.id+3)%13}</span><strong class="score-team">${teams[i+1]}</strong></div></div>`;});$('#liveScores').hide().html(html).fadeIn(250);}).fail(()=>$('#liveScores').html('<p class="text-warning mb-0">Feed unavailable. Please check your internet connection.</p>'));}$(function(){loadScores();$('#refreshScores').click(loadScores);});</script>
+    <!-- The score section updates when the Refresh button is selected. -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="assets/js/main.js">
+    </script>
+    <script>
+      // Load sample live scores for the score cards.
+      $(function () {
+        const teams = ['AG Super Play', 'Chongqing Wolves', 'Guangzhou TTG', 'Shenzhen DYG', 'Wuhan eStarPro'];
+        function loadScores() {
+          $('#liveScores').text('Loading match scores...');
+          $.getJSON('https://jsonplaceholder.typicode.com/posts?_limit=4').done(function (posts) {
+            let scoreHtml = '';
+            posts.forEach(function (post, index) {
+              const firstScore = (post.id + 7) % 13;
+              const secondScore = (post.id + 3) % 13;
+              scoreHtml += '<div class="score-card p-3 mb-2"><div class="score-row"><strong class="score-team">' + teams[index] + '</strong><span class="score">' + firstScore + ' : ' + secondScore + '</span><strong class="score-team">' + teams[index + 1] + '</strong></div></div>';
+            });
+            $('#liveScores').html(scoreHtml);
+          }).fail(function () {
+            $('#liveScores').text('Unable to load scores. Please try again later.');
+          });
+        }
+        loadScores();
+        $('#refreshScores').on('click', loadScores);
+      });
+    </script>
   </body>
 </html>
-
-
-
-
-
