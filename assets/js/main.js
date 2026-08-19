@@ -54,12 +54,6 @@ $(document).ready(function () {
     );
   });
 
-  // Session Storage counts pages until the browser tab is closed.
-  let pageCount = Number(sessionStorage.getItem("f4ourPages")) || 0;
-  pageCount = pageCount + 1;
-  sessionStorage.setItem("f4ourPages", pageCount);
-  $(".session-count").text(pageCount);
-
   // Display the current year and social link in the footer.
   $("#year").text(new Date().getFullYear());
   $(".footer .container").append(
@@ -91,4 +85,3 @@ $(document).ready(function () {
     });
   }
 });
-
