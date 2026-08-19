@@ -3,363 +3,48 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>
-      Players | F4our Gaming
-    </title>
+    <title>Players | F4our Gaming</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
   <body>
     <!-- Shared navigation. The JavaScript turns Tournaments into the Schedule/Rankings/Players dropdown. -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="main.html">
-          F4OUR GAMING
-        </a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-          <span class="navbar-toggler-icon">
-          </span>
-        </button>
-        <div class="collapse navbar-collapse" id="nav">
-          <ul class="navbar-nav ms-auto">
-            <li>
-              <a class="nav-link" href="main.html">
-                Home
-              </a>
-            </li>
-            <li>
-              <a class="nav-link" href="aboutus.html">
-                About
-              </a>
-            </li>
-            <li>
-              <a class="nav-link" href="tournaments.html">
-                Tournaments
-              </a>
-            </li>
-            <li>
-              <a class="nav-link" href="gallery.html">
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a class="nav-link" href="community.html">
-                Community
-              </a>
-            </li>
-            <li>
-              <a class="nav-link" href="contact.html">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"><div class="container"><a class="navbar-brand" href="main.html">F4OUR GAMING</a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto"><li><a class="nav-link" href="main.html">Home</a></li><li><a class="nav-link" href="aboutus.html">About</a></li><li><a class="nav-link" href="tournaments.html">Tournaments</a></li><li><a class="nav-link" href="gallery.html">Gallery</a></li><li><a class="nav-link" href="community.html">Community</a></li><li><a class="nav-link" href="contact.html">Contact</a></li></ul></div></div></nav>
+    <header class="page-header"><div class="container"><p class="eyebrow">KPL player roster</p><h1>HONOR OF<br><span class="gradient-text">PRINCES PLAYERS.</span></h1><p class="lead text-light-emphasis">Players are grouped by the five Honor of Princes map lanes.</p></div></header>
+    <main class="section"><div class="container">
+      <!-- Filter by the five game lanes. -->
+      <div class="d-flex flex-wrap gap-2 mb-4" role="group"><button class="btn btn-outline-light filter-btn active" data-game="all">All players</button><button class="btn btn-outline-light filter-btn" data-game="clash">Clash Lane</button><button class="btn btn-outline-light filter-btn" data-game="farm">Farm Lane</button><button class="btn btn-outline-light filter-btn" data-game="mid">Mid Lane</button><button class="btn btn-outline-light filter-btn" data-game="jungler">Jungler</button><button class="btn btn-outline-light filter-btn" data-game="roamer">Roamer</button></div>
+      <div class="row g-4" id="playerGrid">
+        <!-- Clash Lane -->
+        <div class="col-sm-6 col-lg-3 player" data-game="clash"><div class="card player-card h-100"><img class="portrait" src="assets/images/xuanran.jpg" alt="XuanRan"><div class="card-body"><h2 class="h5">XuanRan</h2><p class="player-role">Clash Lane · AG Super Play</p><p class="small text-light-emphasis">Win Rate 69% · KDA 4.6 · MVP 12</p></div></div></div>
+        <div class="col-sm-6 col-lg-3 player" data-game="clash"><div class="card player-card h-100"><img class="portrait" src="assets/images/QingQing.jpg" alt="QingQing"><div class="card-body"><h2 class="h5">QingQing</h2><p class="player-role">Clash Lane · Guangzhou TTG</p><p class="small text-light-emphasis">Win Rate 66% · KDA 4.3 · MVP 10</p></div></div></div>
+        <div class="col-sm-6 col-lg-3 player" data-game="clash"><div class="card player-card h-100"><img class="portrait" src="assets/images/xiaole.jpg" alt="Xiao Le"><div class="card-body"><h2 class="h5">Xiao Le</h2><p class="player-role">Clash Lane · Shenzhen DYG</p><p class="small text-light-emphasis">Win Rate 64% · KDA 4.1 · MVP 8</p></div></div></div>
+        <!-- Farm Lane -->
+        <div class="col-sm-6 col-lg-3 player" data-game="farm"><div class="card player-card h-100"><img class="portrait" src="assets/images/YiNuo.jpg" alt="YiNuo"><div class="card-body"><h2 class="h5">YiNuo</h2><p class="player-role">Farm Lane · AG Super Play</p><p class="small text-light-emphasis">Win Rate 71% · KDA 5.4 · MVP 18</p></div></div></div>
+        <div class="col-sm-6 col-lg-3 player" data-game="farm"><div class="card player-card h-100"><img class="portrait" src="assets/images/DaoZai.jpg" alt="DaoZai"><div class="card-body"><h2 class="h5">DaoZai</h2><p class="player-role">Farm Lane · Chongqing Wolves</p><p class="small text-light-emphasis">Win Rate 67% · KDA 5.0 · MVP 15</p></div></div></div>
+        <div class="col-sm-6 col-lg-3 player" data-game="farm"><div class="card player-card h-100"><img class="portrait" src="assets/images/QianCheng.jpg" alt="QianCheng"><div class="card-body"><h2 class="h5">QianCheng</h2><p class="player-role">Farm Lane · Shenzhen DYG</p><p class="small text-light-emphasis">Win Rate 63% · KDA 4.7 · MVP 9</p></div></div></div>
+        <!-- Mid Lane -->
+        <div class="col-sm-6 col-lg-3 player" data-game="mid"><div class="card player-card h-100"><img class="portrait" src="assets/images/ChangSheng.jpg" alt="ChangSheng"><div class="card-body"><h2 class="h5">ChangSheng</h2><p class="player-role">Mid Lane · AG Super Play</p><p class="small text-light-emphasis">Win Rate 70% · KDA 5.2 · MVP 14</p></div></div></div>
+        <div class="col-sm-6 col-lg-3 player" data-game="mid"><div class="card player-card h-100"><img class="portrait" src="assets/images/ZiHuan.jpg" alt="ZiHuan"><div class="card-body"><h2 class="h5">ZiHuan</h2><p class="player-role">Mid Lane · Chongqing Wolves</p><p class="small text-light-emphasis">Win Rate 65% · KDA 4.8 · MVP 11</p></div></div></div>
+        <div class="col-sm-6 col-lg-3 player" data-game="mid"><div class="card player-card h-100"><img class="portrait" src="assets/images/QingRong.jpg" alt="QingRong"><div class="card-body"><h2 class="h5">QingRong</h2><p class="player-role">Mid Lane · Wuhan eStarPro</p><p class="small text-light-emphasis">Win Rate 68% · KDA 5.1 · MVP 13</p></div></div></div>
+        <!-- Jungler -->
+        <div class="col-sm-6 col-lg-3 player" data-game="jungler"><div class="card player-card h-100"><img class="portrait" src="assets/images/ZhongYi.jpg" alt="ZhongYi"><div class="card-body"><h2 class="h5">ZhongYi</h2><p class="player-role">Jungler · AG Super Play</p><p class="small text-light-emphasis">Win Rate 70% · KDA 5.6 · MVP 17</p></div></div></div>
+        <div class="col-sm-6 col-lg-3 player" data-game="jungler"><div class="card player-card h-100"><img class="portrait" src="assets/images/XiaoPang.jpg" alt="XiaoPang"><div class="card-body"><h2 class="h5">XiaoPang</h2><p class="player-role">Jungler · Chongqing Wolves</p><p class="small text-light-emphasis">Win Rate 68% · KDA 5.5 · MVP 16</p></div></div></div>
+        <div class="col-sm-6 col-lg-3 player" data-game="jungler"><div class="card player-card h-100"><img class="portrait" src="assets/images/HuaHai.jpg" alt="HuaHai"><div class="card-body"><h2 class="h5">HuaHai</h2><p class="player-role">Jungler · Wuhan eStarPro</p><p class="small text-light-emphasis">Win Rate 67% · KDA 5.3 · MVP 14</p></div></div></div>
+        <!-- Roamer -->
+        <div class="col-sm-6 col-lg-3 player" data-game="roamer"><div class="card player-card h-100"><img class="portrait" src="assets/images/DaShuai.jpg" alt="DaShuai"><div class="card-body"><h2 class="h5">DaShuai</h2><p class="player-role">Roamer · AG Super Play</p><p class="small text-light-emphasis">Win Rate 69% · KDA 4.7 · MVP 10</p></div></div></div>
+        <div class="col-sm-6 col-lg-3 player" data-game="roamer"><div class="card player-card h-100"><img class="portrait" src="assets/images/YiSheng.jpg" alt="YiSheng"><div class="card-body"><h2 class="h5">YiSheng</h2><p class="player-role">Roamer · Chongqing Wolves</p><p class="small text-light-emphasis">Win Rate 64% · KDA 4.4 · MVP 9</p></div></div></div>
       </div>
-    </nav>
-    <header class="page-header">
-      <div class="container">
-        <p class="eyebrow">
-          KPL player name list
-        </p>
-        <h1>
-          HONOR OF
-          <br>
-          <span class="gradient-text">
-            KINGS PLAYERS.
-          </span>
-        </h1>
-        <p class="lead text-light-emphasis">
-          Players are grouped by the five Honor of Kings map lanes.
-        </p>
-      </div>
-    </header>
-    <main class="section">
-      <div class="container">
-        <!-- Filter by the five game lanes. -->
-        <div class="d-flex flex-wrap gap-2 mb-4" role="group">
-          <button class="btn btn-outline-light filter-btn active" data-game="all">
-            All players
-          </button>
-          <button class="btn btn-outline-light filter-btn" data-game="clash">
-            Clash Lane
-          </button>
-          <button class="btn btn-outline-light filter-btn" data-game="farm">
-            Farm Lane
-          </button>
-          <button class="btn btn-outline-light filter-btn" data-game="mid">
-            Mid Lane
-          </button>
-          <button class="btn btn-outline-light filter-btn" data-game="jungler">
-            Jungler
-          </button>
-          <button class="btn btn-outline-light filter-btn" data-game="roamer">
-            Roamer
-          </button>
-        </div>
-        <div class="row g-4" id="playerGrid">
-          <!-- Clash Lane -->
-          <div class="col-sm-6 col-lg-3 player" data-game="clash">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/xuanran.jpg" alt="XuanRan">
-              <div class="card-body">
-                <h2 class="h5">
-                  XuanRan
-                </h2>
-                <p class="player-role">
-                  Clash Lane · AG Super Play
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 69% · KDA 4.6 · MVP 12
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 player" data-game="clash">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/QingQing.jpg" alt="QingQing">
-              <div class="card-body">
-                <h2 class="h5">
-                  QingQing
-                </h2>
-                <p class="player-role">
-                  Clash Lane · Guangzhou TTG
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 66% · KDA 4.3 · MVP 10
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 player" data-game="clash">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/xiaole.jpg" alt="Xiao Le">
-              <div class="card-body">
-                <h2 class="h5">
-                  Xiao Le
-                </h2>
-                <p class="player-role">
-                  Clash Lane · Shenzhen DYG
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 64% · KDA 4.1 · MVP 8
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Farm Lane -->
-          <div class="col-sm-6 col-lg-3 player" data-game="farm">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/YiNuo.jpg" alt="YiNuo">
-              <div class="card-body">
-                <h2 class="h5">
-                  YiNuo
-                </h2>
-                <p class="player-role">
-                  Farm Lane · AG Super Play
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 71% · KDA 5.4 · MVP 18
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 player" data-game="farm">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/DaoZai.jpg" alt="DaoZai">
-              <div class="card-body">
-                <h2 class="h5">
-                  DaoZai
-                </h2>
-                <p class="player-role">
-                  Farm Lane · Chongqing Wolves
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 67% · KDA 5.0 · MVP 15
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 player" data-game="farm">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/QianCheng.jpg" alt="QianCheng">
-              <div class="card-body">
-                <h2 class="h5">
-                  QianCheng
-                </h2>
-                <p class="player-role">
-                  Farm Lane · Shenzhen DYG
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 63% · KDA 4.7 · MVP 9
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Mid Lane -->
-          <div class="col-sm-6 col-lg-3 player" data-game="mid">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/ChangSheng.jpg" alt="ChangSheng">
-              <div class="card-body">
-                <h2 class="h5">
-                  ChangSheng
-                </h2>
-                <p class="player-role">
-                  Mid Lane · AG Super Play
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 70% · KDA 5.2 · MVP 14
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 player" data-game="mid">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/ZiHuan.jpg" alt="ZiHuan">
-              <div class="card-body">
-                <h2 class="h5">
-                  ZiHuan
-                </h2>
-                <p class="player-role">
-                  Mid Lane · Chongqing Wolves
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 65% · KDA 4.8 · MVP 11
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 player" data-game="mid">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/QingRong.jpg" alt="QingRong">
-              <div class="card-body">
-                <h2 class="h5">
-                  QingRong
-                </h2>
-                <p class="player-role">
-                  Mid Lane · Wuhan eStarPro
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 68% · KDA 5.1 · MVP 13
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Jungler -->
-          <div class="col-sm-6 col-lg-3 player" data-game="jungler">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/ZhongYi.jpg" alt="ZhongYi">
-              <div class="card-body">
-                <h2 class="h5">
-                  ZhongYi
-                </h2>
-                <p class="player-role">
-                  Jungler · AG Super Play
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 70% · KDA 5.6 · MVP 17
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 player" data-game="jungler">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/XiaoPang.jpg" alt="XiaoPang">
-              <div class="card-body">
-                <h2 class="h5">
-                  XiaoPang
-                </h2>
-                <p class="player-role">
-                  Jungler · Chongqing Wolves
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 68% · KDA 5.5 · MVP 16
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 player" data-game="jungler">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/HuaHai.jpg" alt="HuaHai">
-              <div class="card-body">
-                <h2 class="h5">
-                  HuaHai
-                </h2>
-                <p class="player-role">
-                  Jungler · Wuhan eStarPro
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 67% · KDA 5.3 · MVP 14
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Roamer -->
-          <div class="col-sm-6 col-lg-3 player" data-game="roamer">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/DaShuai.jpg" alt="DaShuai">
-              <div class="card-body">
-                <h2 class="h5">
-                  DaShuai
-                </h2>
-                <p class="player-role">
-                  Roamer · AG Super Play
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 69% · KDA 4.7 · MVP 10
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 player" data-game="roamer">
-            <div class="card player-card h-100">
-              <img class="portrait" src="assets/images/YiSheng.jpg" alt="YiSheng">
-              <div class="card-body">
-                <h2 class="h5">
-                  YiSheng
-                </h2>
-                <p class="player-role">
-                  Roamer · Chongqing Wolves
-                </p>
-                <p class="small text-light-emphasis">
-                  Win Rate 64% · KDA 4.4 · MVP 9
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+    </div></main>
     <footer class="footer py-4">
       <div class="container d-flex flex-wrap justify-content-between gap-2">
-        <span>
-          ©
-          <span id="year">
-          </span>
-          F4our Gaming
-        </span>
-        <span>
-          Built for the next game.
-        </span>
+        <span>© <span id="year"></span> F4our Gaming</span>
+        <span>Built for the next game.</span>
       </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-    <script src="assets/js/main.js">
-    </script>
-    <script>
-      // Filter player cards by the selected game lane.
-      $('.filter-btn').on('click', function () {
-        const lane = $(this).data('game');
-        $('.filter-btn').removeClass('active');
-        $(this).addClass('active');
-        $('.player').each(function () {
-          const matches = lane === 'all' || $(this).data('game') === lane;
-          $(this).stop(true, true)[matches ? 'fadeIn' : 'fadeOut'](200);
-        });
-      });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="assets/js/main.js"></script>
+    <script>$('.filter-btn').click(function(){$('.filter-btn').removeClass('active');$(this).addClass('active');const lane=$(this).data('game');$('.player').stop(true,true).fadeOut(120);setTimeout(()=>{$('.player').filter(function(){return lane==='all'||$(this).data('game')===lane;}).fadeIn(220);},130);});</script>
   </body>
 </html>
+

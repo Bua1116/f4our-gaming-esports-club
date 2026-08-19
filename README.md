@@ -1,4 +1,4 @@
-# F4our Gaming E-Sports Club
+# Neon Nexus E-Sports Club
 
 Eight mobile-responsive HTML pages for the UCCD2323 E-Sports Club case.
 

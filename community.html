@@ -81,13 +81,13 @@
         <div class="row g-5">
           <div class="col-lg-5">
             <p class="eyebrow">
-              Join the conversation
+              Meet your squad
             </p>
             <h2 class="section-title">
-              Chat with other gaming fans.
+              More than a club chat.
             </h2>
             <p class="text-light-emphasis">
-              Join our Discord server to chat with other people who are interested in Honor of Kings, tournaments and gaming news. It is a simple place to share information and talk about the games you enjoy.
+              Find teammates, ask for a scrim, share your best clip or learn how our events come together. There is a channel for every kind of player.
             </p>
             <a href="https://discord.com/" target="_blank" class="btn btn-neon mb-2">
               <i class="bi bi-discord">
@@ -100,12 +100,14 @@
               <div class="d-flex align-items-center justify-content-between">
                 <div>
                   <p class="eyebrow mb-1">
-                    Recent news
+                  Instagram feed widget simulation
                   </p>
                   <h2 class="h3 fw-bold">
                     @f4our_gaming
                   </h2>
                 </div>
+                <i class="bi bi-instagram fs-2 text-info">
+                </i>
               </div>
               <div class="social-post p-3 my-3">
                 <strong>
@@ -115,10 +117,10 @@
                   · 2h
                 </small>
                 <p class="mb-1 mt-2">
-                  Registration is open for Honor of Kings Open! Bring your five, bring your energy. ⚡
+                  Registration is open for Honor of Princes Open! Bring your five, bring your energy. ⚡
                 </p>
                 <small class="text-secondary">
-                  #HonorOfKings #F4ourGaming
+                  #HonorOfPrinces #F4ourGaming
                 </small>
               </div>
               <div class="social-post p-3">
@@ -134,7 +136,7 @@
                 <button id="sharePost" class="btn btn-sm btn-outline-light">
                   <i class="bi bi-share">
                   </i>
-                  Share
+                  Share announcement
                 </button>
               </div>
             </div>
@@ -144,15 +146,8 @@
     </main>
     <footer class="footer py-4">
       <div class="container d-flex flex-wrap justify-content-between gap-2">
-        <span>
-          ©
-          <span id="year">
-          </span>
-          F4our Gaming
-        </span>
-        <span>
-          Built for the next game.
-        </span>
+        <span>© <span id="year"></span> F4our Gaming</span>
+        <span>Built for the next game.</span>
       </div>
     </footer>
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
@@ -162,24 +157,11 @@
       </div>
     </div>
     <!-- Social sharing uses the phone share menu or copies the announcement link. -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-    <script src="assets/js/main.js">
-    </script>
-    <script>
-      // Share the announcement or copy its link.
-      $('#sharePost').on('click', function () {
-        if (navigator.share) {
-          navigator.share({ title: 'Honor of Kings registration', text: 'Registration is open for Honor of Kings.', url: location.href });
-        } else if (navigator.clipboard) {
-          navigator.clipboard.writeText(location.href);
-          showToast('Announcement link copied to clipboard.');
-        } else {
-          showToast('Copy this page link from your browser address bar.');
-        }
-      });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="assets/js/main.js"></script><script>$('#sharePost').click(function(){if(navigator.share){navigator.share({title:'Honor of Princes Open registration',text:'Registration is open for Honor of Princes Open!',url:location.href});}else{navigator.clipboard?.writeText(location.href);showToast('Announcement link copied to clipboard.');}});</script>
   </body>
 </html>
+
+
+
+
+
