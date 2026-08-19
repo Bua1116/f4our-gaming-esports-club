@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,10 +6,10 @@
     <title>
       F4OUR GAMING | Gaming Community
     </title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/style.css" rel="stylesheet">
   </head>
   <body>
     <!-- Shared navigation links to all eight website pages. -->
@@ -67,7 +67,7 @@
         <div class="row align-items-center">
           <div class="col-lg-8">
             <p class="eyebrow">
-              Public Honor of Princes community
+              Honor of Kings public community
             </p>
             <h1 class="display-title">
               PLAY.
@@ -89,12 +89,7 @@
             <a class="btn btn-outline-light" href="aboutus.html">
               Meet the club
             </a>
-            <!-- Public-facing Honor of Princes community statistics. -->
-            <div class="d-flex flex-wrap gap-3 mt-5">
-              <div class="hero-stat"><strong>78%</strong><span>community win rate</span></div>
-              <div class="hero-stat"><strong>8</strong><span>years competing</span></div>
-              <div class="hero-stat"><strong>12</strong><span>featured titles</span></div>
-            </div>
+            <!-- Public-facing Honor of Kings community statistics. -->
           </div>
           <div class="col-lg-4 mt-5 mt-lg-0">
             <div class="panel p-4">
@@ -102,10 +97,10 @@
                 Next major event
               </p>
               <h2 class="h3 fw-bold">
-                Honor of Princes OPEN
+                Honor of Kings OPEN
               </h2>
               <p class="text-light-emphasis">
-                AG Super Play vs Chongqing Wolves • Honor of Princes 5v5
+                AG Super Play vs Chongqing Wolves • Honor of Kings 5v5
               </p>
               <hr>
               <div class="d-flex justify-content-between">
@@ -143,24 +138,21 @@
               <h2 class="section-title">
                 Queue up for something major.
               </h2>
-            </div>
-            <div class="col-md-5 text-md-end">
-              <a class="text-info" href="tournaments.html">
-                Full schedule
-                <i class="bi bi-arrow-right">
-                </i>
-              </a>
+              <!-- Session Storage displays the tournament selected during this browser session. -->
+              <p id="lastTournament" class="text-light-emphasis mb-0">
+                Click a competition to save your interest for this session.
+              </p>
             </div>
           </div>
           <div class="row g-4">
             <div class="col-md-4">
               <!-- event-card keeps every event detail and 5v5 label aligned. -->
-              <article class="card event-card h-100 p-4">
+              <article class="card event-card tournament-card h-100 p-4" data-tournament="Honor of Kings Open">
                 <span class="event-date">
-                  28 AUG • Honor of Princes
+                  28 AUG • Honor of Kings
                 </span>
                 <h3 class="mt-3">
-                  Honor of Princes Open
+                  Honor of Kings Open
                 </h3>
                 <p class="text-light-emphasis">
                   AG Super Play vs Chongqing Wolves • 7:00 PM • LDK1
@@ -171,15 +163,15 @@
               </article>
             </div>
             <div class="col-md-4">
-              <article class="card event-card h-100 p-4">
+              <article class="card event-card tournament-card h-100 p-4" data-tournament="Kings Arena Cup">
                 <span class="event-date">
-                  12 SEP • Honor of Princes
+                  12 SEP • Honor of Kings
                 </span>
                 <h3 class="mt-3">
                   Kings Arena Cup
                 </h3>
                 <p class="text-light-emphasis">
-                  Chongqing Wolves vs DRG • 3:00 PM • LDK2
+                  Guangzhou TTG vs Shenzhen DYG • 3:00 PM • LDK2
                 </p>
                 <span class="tag">
                   5v5 / MOBILE
@@ -187,15 +179,15 @@
               </article>
             </div>
             <div class="col-md-4">
-              <article class="card event-card h-100 p-4">
+              <article class="card event-card tournament-card h-100 p-4" data-tournament="Kings Clash">
                 <span class="event-date">
-                  26 SEP • Honor of Princes
+                  26 SEP • Honor of Kings
                 </span>
                 <h3 class="mt-3">
                   Kings Clash
                 </h3>
                 <p class="text-light-emphasis">
-                  JD Gaming vs AG Super Play • 5:30 PM • LDK1
+                  Wuhan eStarPro vs AG Super Play • 5:30 PM • LDK1
                 </p>
                 <span class="tag">
                   5v5 / PC
@@ -262,10 +254,42 @@
       </div>
     </div>
     <!-- Cookie feature: asks for a name once and welcomes returning visitors. -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="assets/js/main.js"></script><script>$(function(){const last=getCookie('neonNexusVisitor');const hour=new Date().getHours();const time=hour<12?'morning':hour<18?'afternoon':'evening';$('#visitorGreeting').text(last?`Welcome back, ${decodeURIComponent(last)}. Ready for another win?`:`Good ${time}, challenger. Your next squad is waiting.`);if(!last){setTimeout(()=>{const name=prompt('Welcome to F4our Gaming! What should we call you?');if(name&&name.trim()){setCookie('neonNexusVisitor',name.trim(),60);$('#visitorGreeting').text(`Welcome, ${name.trim()}. Ready to play?`);}},700);}});</script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script type="text/javascript" src="assets/js/main.js">
+    </script>
+    <script type="text/javascript">
+      // Show a different greeting for a returning visitor.
+      $(document).ready(function () {
+        const savedName = getCookie('f4ourGamingVisitor');
+        if (savedName) {
+          $('#visitorGreeting').text('Welcome back, ' + decodeURIComponent(savedName) + '. Ready for another win?');
+        } else {
+          $('#visitorGreeting').text('Welcome to F4our Gaming. Your next squad is waiting.');
+          setTimeout(function () {
+            const name = prompt('Welcome to F4our Gaming! What should we call you?');
+            if (name && name.trim()) {
+              setCookie('f4ourGamingVisitor', name.trim(), 60);
+              $('#visitorGreeting').text('Welcome, ' + name.trim() + '. Ready to play?');
+            }
+          }, 700);
+        }
+
+        // Store the competition the user is interested in for this browser session.
+        const interestedCompetition = sessionStorage.getItem('f4ourInterestedCompetition');
+
+        if (interestedCompetition) {
+          $('#lastTournament').text('Competition you are interested in: ' + interestedCompetition);
+        }
+
+        $('.tournament-card').on('click', function () {
+          const tournamentName = $(this).data('tournament');
+          sessionStorage.setItem('f4ourInterestedCompetition', tournamentName);
+          $('#lastTournament').text('Competition you are interested in: ' + tournamentName);
+        });
+      });
+    </script>
   </body>
 </html>
-
-
-
-
