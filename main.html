@@ -254,7 +254,15 @@
     <script type="text/javascript">
       // Show a different greeting for a returning visitor.
       $(document).ready(function () {
-        const savedName = getCookie('f4ourGamingVisitor');
+        // Keep the visitor name in Session Storage as a backup for direct file opening.
+        let savedName = getCookie('f4ourGamingVisitor');
+
+        try {
+          savedName = savedName || sessionStorage.getItem('f4ourGamingVisitor');
+        } catch (error) {
+          // The cookie still works when Session Storage is not available.
+        }
+
         if (savedName) {
           $('#visitorGreeting').text('Welcome back, ' + decodeURIComponent(savedName) + '. Ready for another win?');
         } else {
@@ -262,8 +270,18 @@
           setTimeout(function () {
             const name = prompt('Welcome to F4our Gaming! What should we call you?');
             if (name && name.trim()) {
-              setCookie('f4ourGamingVisitor', name.trim(), 60);
-              $('#visitorGreeting').text('Welcome, ' + name.trim() + '. Ready to play?');
+              const cleanName = name.trim();
+              const savedValue = encodeURIComponent(cleanName);
+
+              setCookie('f4ourGamingVisitor', cleanName, 60);
+
+              try {
+                sessionStorage.setItem('f4ourGamingVisitor', savedValue);
+              } catch (error) {
+                // The cookie still works when Session Storage is not available.
+              }
+
+              $('#visitorGreeting').text('Welcome, ' + cleanName + '. Ready to play?');
             }
           }, 700);
         }
