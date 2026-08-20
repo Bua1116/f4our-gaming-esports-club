@@ -64,8 +64,17 @@ $(document).ready(function () {
     "</div>"
   );
 
-  // Show the cookie notice until the visitor accepts it.
-  if (getCookie("f4ourCookieConsent") === "") {
+  // Use Session Storage as a backup when the website is opened directly from a file.
+  let cookieAccepted = getCookie("f4ourCookieConsent") === "accepted";
+
+  try {
+    cookieAccepted = cookieAccepted || sessionStorage.getItem("f4ourCookieConsent") === "accepted";
+  } catch (error) {
+    // The cookie still works when Session Storage is not available.
+  }
+
+  // Show the notice only until the visitor accepts it during this website session.
+  if (!cookieAccepted) {
     const cookieNotice =
       '<div class="modal fade cookie-banner" id="cookieNotice" tabindex="-1">' +
         '<div class="modal-dialog modal-dialog-centered"><div class="modal-content">' +
@@ -81,6 +90,13 @@ $(document).ready(function () {
 
     $("#acceptCookies").on("click", function () {
       setCookie("f4ourCookieConsent", "accepted", 60);
+
+      try {
+        sessionStorage.setItem("f4ourCookieConsent", "accepted");
+      } catch (error) {
+        // The cookie still works when Session Storage is not available.
+      }
+
       cookieModal.hide();
     });
   }
